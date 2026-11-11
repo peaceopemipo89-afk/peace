@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PeaceGrowthHub — Books. Branding. Growth.</title>
+<meta name="description" content="PeaceGrowthHub helps authors create polished books, strengthen their presentation, and build a stronger path toward reaching readers.">
+<meta name="theme-color" content="#1d201c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#1d201c;--dark2:#272b25;--cream:#f4f2ea;--sage:#dcdfc8;--olive:#6b7a45;--muted:#6d6f66;--line:rgba(29,32,28,.15);--serif:'Playfair Display',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--dark);line-height:1.6;font-size:15px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:96px 0}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1}
+h1{font-size:clamp(40px,6vw,68px)}
+h2{font-size:clamp(32px,4.4vw,48px)}
+em{font-style:italic;color:var(--olive)}
+.btn{display:inline-block;background:var(--dark);color:var(--cream);padding:13px 24px;font-size:13px;font-weight:500;letter-spacing:.03em;border:1px solid var(--dark);cursor:pointer;transition:.2s}
+.btn:hover{background:var(--olive);border-color:var(--olive)}
+.btn.ghost{background:transparent;color:var(--dark)}
+.btn.ghost:hover{background:var(--dark);color:var(--cream)}
+.link{font-size:13px;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px}
+.lead{color:var(--muted);max-width:480px}
+/* top bar + nav */
+.topbar{background:var(--dark);color:var(--sage);font-size:10px;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:8px}
+nav{position:sticky;top:0;z-index:20;background:rgba(244,242,234,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:18px;font-weight:600}
+.logo i{width:26px;height:26px;border-radius:50%;background:var(--dark);display:inline-block;position:relative}
+.logo i::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--sage)}
+.links{display:flex;gap:26px;font-size:12px;color:var(--muted)}
+.links a:hover{color:var(--dark)}
+nav .btn{padding:10px 18px;font-size:12px}
+@media(max-width:860px){.links{display:none}}
+/* hero */
+.hero{padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero p{color:var(--muted);margin:24px 0 32px;max-width:440px}
+.hero .cta{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.hero-img{aspect-ratio:4/3;background:linear-gradient(135deg,#3a2f26,#1d201c 55%,#5a4a3a);position:relative;overflow:hidden}
+.hero-img::before{content:"";position:absolute;width:55%;height:60%;left:12%;top:22%;background:#8b3a2e;transform:rotate(-8deg);box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.hero-img::after{content:"";position:absolute;width:30%;height:30%;right:14%;bottom:16%;background:#e8e2d0;border-radius:40% 55% 45% 50%;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.badge{position:absolute;right:16px;bottom:16px;width:76px;height:76px;border-radius:50%;background:var(--dark);color:var(--sage);font-size:9px;letter-spacing:.14em;display:grid;place-items:center;text-align:center;z-index:2}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+/* marquee */
+.strip{background:var(--sage);padding:14px 0;overflow:hidden;white-space:nowrap}
+.strip div{display:inline-block;animation:slide 40s linear infinite;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dark)}
+.strip span{margin:0 28px}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* intro */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:72px;border-top:1px solid var(--line)}
+.mini p{padding:22px 20px 0 0;font-size:12px;color:var(--muted)}
+@media(max-width:860px){.mini{grid-template-columns:1fr 1fr}}
+/* services */
+.dark{background:var(--dark);color:var(--cream)}
+.dark .eyebrow{color:#9a9d8c}
+.dark em{color:#a9b88a}
+.dark .head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:56px}
+.dark .head p{color:#9a9d8c;max-width:320px;font-size:13px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)}
+.card{padding:26px 22px 30px;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);transition:.25s}
+.card:hover{background:var(--dark2)}
+.card small{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#7f8374}
+.card h3{font-size:22px;margin:14px 0 10px}
+.card p{font-size:12px;color:#9a9d8c;margin-bottom:16px}
+.card ul{list-style:none;font-size:11px;color:#c9ccb8}
+.card li{padding:4px 0;border-top:1px solid rgba(255,255,255,.07)}
+@media(max-width:960px){.grid4{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid4{grid-template-columns:1fr}}
+/* process */
+.steps{margin-top:48px;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:60px 240px 1fr 30px;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+.step b{font-weight:500;font-size:15px}
+.step span{font-size:12px;color:var(--muted)}
+.step i{font-style:normal;color:var(--olive)}
+.step small{color:var(--muted);font-size:11px}
+@media(max-width:700px){.step{grid-template-columns:34px 1fr}.step span,.step i{display:none}}
+/* portfolio */
+.tabs{display:flex;gap:18px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:28px 0 36px;flex-wrap:wrap}
+.tabs .on{color:var(--dark);border-bottom:1px solid var(--dark)}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cover{aspect-ratio:4/3;display:grid;place-items:center;text-align:center;padding:20px;font-family:var(--serif);font-size:28px;line-height:1.05;margin-bottom:12px;color:#fff;text-transform:uppercase;font-weight:600}
+.c1{background:#e9a825;color:#1d201c}.c2{background:#d8d9d4;color:#1d201c}.c3{background:#f0b429;color:#1d201c}
+.c4{background:#0f0f12}.c5{background:linear-gradient(#1b1b1b,#6a1e1e)}.c6{background:linear-gradient(135deg,#2a1f12,#a8741a)}
+.book small{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.book h4{font-family:var(--serif);font-size:17px;font-weight:500;margin:2px 0}
+.book p{font-size:11px;color:var(--muted)}
+@media(max-width:760px){.books{grid-template-columns:1fr 1fr}}
+/* feature */
+.feature{background:var(--sage)}
+.feature .pic{aspect-ratio:4/5;max-width:420px;background:linear-gradient(160deg,#cfc9b4,#8d8570);position:relative}
+.feature .pic::after{content:"";position:absolute;left:18%;right:18%;bottom:14%;height:38%;background:#f4f2ea;transform:rotate(-4deg);box-shadow:0 12px 24px rgba(0,0,0,.2)}
+.feature .two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px;font-size:12px;color:var(--muted)}
+.feature p.lead{margin:22px 0 4px;max-width:520px}
+/* values */
+.values{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-top:48px}
+.values div{padding:30px 24px;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:20px}
+.values div:nth-child(odd){border-right:1px solid var(--line)}
+@media(max-width:700px){.values{grid-template-columns:1fr}.values div:nth-child(odd){border-right:0}}
+/* about */
+.about .portrait{aspect-ratio:3/4;max-width:340px;background:linear-gradient(180deg,#59606a,#1d201c);position:relative}
+.about .portrait::after{content:"";position:absolute;left:30%;right:30%;top:18%;height:30%;border-radius:50%;background:#3b2a22}
+.about p{color:var(--muted);margin:16px 0;max-width:520px}
+.sign{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--dark)}
+/* testimonials */
+.test{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:48px}
+.quote{padding:36px;border:1px solid var(--line);background:#fff}
+.quote .stars{color:var(--olive);letter-spacing:4px;margin-bottom:14px}
+.quote q{font-family:var(--serif);font-style:italic;font-size:26px;display:block;quotes:none}
+.quote p{font-size:12px;color:var(--muted);margin-top:18px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.shot{background:var(--dark);aspect-ratio:3/4;padding:14px;display:flex;flex-direction:column;gap:8px}
+.shot i{display:block;height:10px;background:#2f4a3a;border-radius:5px;width:80%}
+.shot i:nth-child(even){background:#3a3e37;margin-left:auto;width:65%}
+@media(max-width:800px){.test{grid-template-columns:1fr}}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-size:14px;font-weight:500;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--olive)}
+details[open] summary::after{content:"–"}
+details p{font-size:13px;color:var(--muted);margin-top:10px;max-width:560px}
+/* contact */
+.contact{background:var(--sage)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+label{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:block}
+input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--dark);padding:10px 0;font:inherit;font-size:13px;outline:none;color:var(--dark)}
+textarea{resize:vertical;min-height:80px}
+form .full{grid-column:1/-1}
+.info{margin-top:28px;font-size:12px;color:var(--muted);line-height:2}
+/* cta + footer */
+.final{text-align:center;padding:110px 0}
+.final p{color:var(--muted);max-width:480px;margin:20px auto 30px}
+footer{background:var(--dark);color:#9a9d8c;padding:56px 0 28px;font-size:12px}
+footer .wrap{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+footer .logo{color:var(--cream)}
+footer h5{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#7f8374;margin-bottom:12px;font-weight:500}
+footer a{display:block;padding:3px 0}
+footer a:hover{color:var(--cream)}
+.copy{text-align:center;margin-top:40px;font-size:11px}
+</style>
+</head>
+<body>
+
+<div class="topbar">Books · Branding · Growth</div>
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><i></i>PeaceGrowthHub</a>
+    <div class="links">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#process">Process</a><a href="#testimonials">Results</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="btn">Start Your Book Project</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Books · Branding · Growth</div>
+      <h1>Professional book services <em>from manuscript to market.</em></h1>
+      <p>PeaceGrowthHub helps authors and independent book creators shape polished, professional books with a clear plan, a stronger presentation, and a path toward reaching readers.</p>
+      <div class="cta"><a href="#contact" class="btn">Start Your Book Project</a><a href="#services" class="link">Explore services →</a></div>
+    </div>
+    <div class="hero-img"><div class="badge">PAY<br>OFF</div></div>
+  </div>
+</header>
+
+<div class="strip"><div>
+  <span>· Book Editing</span><span>Book Formatting</span><span>Cover Design</span><span>KDP Support</span><span>Book Marketing</span><span>Author Branding</span><span>Publishing Support</span>
+  <span>· Book Editing</span><span>Book Formatting</span><span>Cover Design</span><span>KDP Support</span><span>Book Marketing</span><span>Author Branding</span><span>Publishing Support</span>
+</div></div>
+
+<section id="about-intro">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow">01 — The Problem</div>
+        <h2>Your book deserves more than a finished manuscript.</h2>
+      </div>
+      <div style="padding-top:40px">
+        <p style="font-size:16px">A strong book is built in the details — and supported by a clear plan.</p>
+        <p class="lead" style="margin:14px 0 20px">From the first structure edit to the last cover tweak, PeaceGrowthHub brings together the essential pieces needed to turn your idea into a book readers will notice, trust, and remember.</p>
+        <a href="#contact" class="link">Let's talk it over ↓</a>
+      </div>
+    </div>
+    <div class="mini">
+      <p>A manuscript that reads professionally and clearly.</p>
+      <p>A cover that feels intentional and credible.</p>
+      <p>Clean listings and the right details in place.</p>
+      <p>Trying to stand out and grow without a clear plan.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="services">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">02 — What We Do</div><h2>Everything your book needs to <em>make its way into the world.</em></h2></div>
+      <p>Practical, professional services for authors who care about how their book is presented.</p>
+    </div>
+    <div class="grid4">
+      <div class="card"><small>01 · Polish</small><h3>Book Editing</h3><p>Developmental, line, and copy editing to sharpen your manuscript.</p><ul><li>Developmental editing</li><li>Line editing</li><li>Copy editing</li><li>Proofreading</li></ul></div>
+      <div class="card"><small>02 · Structure</small><h3>Book Formatting</h3><p>Clean, professional layouts for print and digital.</p><ul><li>eBook formatting</li><li>Print interior layout</li><li>Chapter styling</li><li>Table of contents</li></ul></div>
+      <div class="card"><small>03 · Presentation</small><h3>Cover Design</h3><p>Covers that look right in your genre and sell at a glance.</p><ul><li>Front cover design</li><li>Full wrap covers</li><li>Series branding</li><li>Genre-fit concepts</li></ul></div>
+      <div class="card"><small>04 · Discovery</small><h3>Metadata &amp; Listings</h3><p>Book pages that are clear, searchable, and persuasive.</p><ul><li>Book descriptions</li><li>Keywords</li><li>Categories</li><li>Author bio</li></ul></div>
+      <div class="card"><small>05 · Visibility</small><h3>Book Marketing</h3><p>Practical support to help readers find your book.</p><ul><li>Launch preparation</li><li>Reader outreach</li><li>Promotion planning</li><li>Review strategy</li></ul></div>
+      <div class="card"><small>06 · Publishing</small><h3>KDP Support</h3><p>Hands-on help getting your book live on Amazon.</p><ul><li>KDP account setup</li><li>Uploading &amp; checks</li><li>Pricing &amp; royalties</li><li>Paperback &amp; hardcover</li></ul></div>
+      <div class="card"><small>07 · Creation</small><h3>Book Development</h3><p>From rough idea to a book with a clear shape.</p><ul><li>Outlining</li><li>Concept refinement</li><li>Ghostwriting support</li><li>Content planning</li></ul></div>
+      <div class="card"><small>08 · Identity</small><h3>Author Branding</h3><p>A consistent public presence around your name and work.</p><ul><li>Author website</li><li>Social profiles</li><li>Brand voice</li><li>Media kit</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="split">
+      <h2>Clear steps. <em>Thoughtful progress.</em></h2>
+      <p class="lead" style="padding-top:12px">A simple, structured process so you always know what's happening and what comes next.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><i>01</i><b>Tell Us About Your Book</b><span>Share your goals, genre, and where your book currently stands.</span><small>→</small></div>
+      <div class="step"><i>02</i><b>Project Review</b><span>We review your manuscript, materials, and needs.</span><small>→</small></div>
+      <div class="step"><i>03</i><b>Project Plan</b><span>You receive a clear plan, scope, and timeline.</span><small>→</small></div>
+      <div class="step"><i>04</i><b>Production</b><span>We get to work on the agreed services.</span><small>→</small></div>
+      <div class="step"><i>05</i><b>Review &amp; Revisions</b><span>You review the work and we refine it together.</span><small>→</small></div>
+      <div class="step"><i>06</i><b>Final Delivery</b><span>You receive complete, publication-ready files.</span><small>→</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" style="background:#fff">
+  <div class="wrap">
+    <div class="split">
+      <div><div class="eyebrow">04 — Selected Work</div><h2>A growing body <em>of good work.</em></h2></div>
+      <p class="lead" style="padding-top:40px">Selected book covers and interiors from recent author projects.</p>
+    </div>
+    <div class="tabs"><span class="on">All</span><span>Book Covers</span><span>Interior Formatting</span><span>Book Design</span></div>
+    <div class="books">
+      <div class="book"><div class="cover c1">Become the person you admire</div><small>Book Cover</small><h4>Become the Person You Admire</h4><p>Nonfiction · Self-help</p></div>
+      <div class="book"><div class="cover c2">Reflect</div><small>Interior Formatting</small><h4>Reflect</h4><p>Journal · Print layout</p></div>
+      <div class="book"><div class="cover c3">01</div><small>Book Design</small><h4>Lead With Clarity</h4><p>Business · Print &amp; eBook</p></div>
+      <div class="book"><div class="cover c4">The Silence Between Us</div><small>Book Cover</small><h4>The Silence Between Us</h4><p>Fiction · Romance</p></div>
+      <div class="book"><div class="cover c5">The CEO's Fake Fiancée</div><small>Book Cover</small><h4>The CEO's Fake Fiancée</h4><p>Fiction · Romance</p></div>
+      <div class="book"><div class="cover c6">When Life Hits Hard</div><small>Book Cover</small><h4>When Life Hits Hard</h4><p>Nonfiction · Inspiration</p></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:36px;flex-wrap:wrap;gap:16px">
+      <span style="font-size:11px;color:var(--muted)">Have a project in mind?</span>
+      <a href="#contact" class="btn ghost">Let's Review Your Book →</a>
+    </div>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="wrap split" style="align-items:center">
+    <div class="pic"></div>
+    <div>
+      <div class="eyebrow">05 — Beyond the Book</div>
+      <h2>Publishing your book is only the <em>beginning.</em></h2>
+      <p class="lead">A professionally written book does not automatically guarantee visibility. Reaching readers takes thoughtful presentation, clear positioning, and consistent effort over time.</p>
+      <div class="two"><div>Author branding &amp; presence</div><div>Reader-focused positioning</div></div>
+      <p style="margin-top:24px"><a href="#contact" class="link">Talk about your launch →</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="split">
+      <div><div class="eyebrow">06 — Why Trust the Process</div><h2>Professionalism is <em>in the details.</em></h2></div>
+      <p class="lead" style="padding-top:40px">The following points are what make clear communication and consistent quality possible on every project.</p>
+    </div>
+    <div class="values">
+      <div>Multiple services, one thoughtful partner</div>
+      <div>Reader-focused presentation</div>
+      <div>Clear communication at every stage</div>
+      <div>Personalized project approach</div>
+      <div>Publishing and marketing support</div>
+      <div>A genuine focus on quality</div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about" style="background:#fff">
+  <div class="wrap split" style="align-items:center">
+    <div class="portrait"></div>
+    <div>
+      <div class="eyebrow">07 — About PeaceGrowthHub</div>
+      <h2>Built for the people <em>behind the pages.</em></h2>
+      <p>PeaceGrowthHub is a Book Services &amp; Marketing Specialist helping authors and independent book creators move from first idea to professional book — and beyond.</p>
+      <p>Whether you are shaping an early draft or finishing a book that deserves a better presentation, we offer a simple, practical approach: clear direction, careful work, and honest advice.</p>
+      <div class="sign">PeaceGrowthHub</div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="split">
+      <div><div class="eyebrow">08 — Author Voices</div><h2>Helping authors move <em>forward with confidence.</em></h2></div>
+      <p class="lead" style="padding-top:40px">Real conversations. Practical outcomes. Authors who are glad they started.</p>
+    </div>
+    <div class="test">
+      <div class="quote"><div class="stars">★★★★★</div><q>"My book is now doing well on Amazon."</q><p>— Author, client feedback</p></div>
+      <div class="shots"><div class="shot"><i></i><i></i><i></i><i></i><i></i></div><div class="shot"><i></i><i></i><i></i><i></i><i></i></div><div class="shot"><i></i><i></i><i></i><i></i><i></i></div><div class="shot"><i></i><i></i><i></i><i></i><i></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:#fff">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">09 — FAQ</div>
+      <h2>Good questions lead to <em>good work.</em></h2>
+      <p class="lead" style="margin:20px 0">Here are answers to the questions authors ask most. Still unsure? Just ask.</p>
+      <a href="#contact" class="link">Get in touch →</a>
+    </div>
+    <div>
+      <details><summary>Do you work with first-time authors?</summary><p>Yes. Many of our clients are first-time authors, and we guide them through each stage.</p></details>
+      <details><summary>What genres do you work with?</summary><p>We work with both fiction and nonfiction, including romance, self-help, business, and inspirational titles.</p></details>
+      <details><summary>Can you edit my entire manuscript?</summary><p>Yes. We offer developmental, line, and copy editing, as well as proofreading.</p></details>
+      <details><summary>Can you format books for Amazon KDP?</summary><p>Yes. We prepare print and eBook files to meet KDP requirements.</p></details>
+      <details><summary>Can you design my book cover?</summary><p>Yes. We design front covers and full wraps suited to your genre.</p></details>
+      <details><summary>Do you offer book marketing?</summary><p>Yes. We offer launch preparation, promotion planning, and reader outreach support.</p></details>
+      <details><summary>How do I send my manuscript?</summary><p>After you submit the contact form, we'll tell you how to share your files securely.</p></details>
+      <details><summary>How long does a project take?</summary><p>It depends on scope. You'll receive a timeline in your project plan.</p></details>
+      <details><summary>Can I offer revisions?</summary><p>Yes. A review and revision stage is built into every project.</p></details>
+      <details><summary>How do I get started?</summary><p>Fill out the form below and we'll respond with next steps.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">10 — Start Here</div>
+      <h2>Ready to give your book the professional treatment it deserves?</h2>
+      <p class="lead" style="margin-top:20px">Tell us about your book and what you need. We'll reply with clear next steps.</p>
+      <div class="info">hello@peacegrowthhub.com<br>Response within 1–2 business days</div>
+    </div>
+    <form onsubmit="event.preventDefault();alert('Thanks! This demo form is not connected to a backend yet.')">
+      <div><label>Name</label><input type="text" placeholder="Your name" required></div>
+      <div><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+      <div><label>Service</label><select><option>Book editing</option><option>Book formatting</option><option>Cover design</option><option>KDP support</option><option>Book marketing</option><option>Author branding</option></select></div>
+      <div><label>Genre</label><input type="text" placeholder="e.g. Romance"></div>
+      <div class="full"><label>Tell us about your book</label><textarea placeholder="Describe your project, goals, and timeline."></textarea></div>
+      <div class="full"><button class="btn" type="submit">Request a Project Review →</button></div>
+    </form>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Let's build something <em>your readers will remember.</em></h2>
+    <p>Whether you're polishing a draft or preparing to publish, PeaceGrowthHub is ready to help you move forward with confidence.</p>
+    <a href="#contact" class="btn">Start Your Next Project</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><a href="#top" class="logo"><i></i>PeaceGrowthHub</a><p style="margin-top:12px">Books. Branding. Growth.</p></div>
+    <div><h5>Services</h5><a href="#services">Book Editing</a><a href="#services">Book Formatting</a><a href="#services">Cover Design</a><a href="#services">Book Marketing</a></div>
+    <div><h5>Company</h5><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+  </div>
+  <div class="copy">© 2026 PeaceGrowthHub. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
